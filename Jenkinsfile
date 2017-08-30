@@ -4,7 +4,7 @@ node(env.NODE_NAME) {
         env.PATH = "newPath/bin:${env.PATH}"
         version = '1.0' + env.BUILD_NUMBER
         currentBuild.displayName = version
-        // sh 'echo ${env.PATH}'
+        sh 'echo env.PATH'
         sh 'echo testing'
     }
 
