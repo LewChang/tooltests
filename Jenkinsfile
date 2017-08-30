@@ -1,4 +1,4 @@
-node("${env.NODE_NAME}") {
+node(${env.NODE_NAME}) {
 
     stage('Configure') {
         env.PATH = "newPath/bin:${env.PATH}"
