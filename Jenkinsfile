@@ -3,8 +3,9 @@
 pipeline {
     agent any
     environment {
-        version = '1.0 + env.BUILD_NUMBER'
-        currentBuild.displayName = version
+        version = 1.0 + env.BUILD_NUMBER
+
+        //currentBuild.displayName = version
     }
 
     stages {
