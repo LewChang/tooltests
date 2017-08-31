@@ -1,13 +1,15 @@
 pipeline {
     agent any
+    environment {
+        env.PATH = "newPath/bin:${env.PATH}"
+        version = '1.0' + env.BUILD_NUMBER
+        currentBuild.displayName = version
+    }
 
     stages {
         stage('Configure') {
             steps {
-                //env.PATH = "newPath/bin:${env.PATH}"
-                //version = '1.0' + env.BUILD_NUMBER
-                //currentBuild.displayName = version
-                //echo "PATH = ${env.PATH}"
+                echo "PATH = ${env.PATH}"
                 echo "Configure End"
             }
         }
