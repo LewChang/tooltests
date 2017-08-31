@@ -1,14 +1,16 @@
+#!/usr/bin/env groovy
+
 pipeline {
     agent any
     environment {
         version = '1.0 + env.BUILD_NUMBER'
-        'currentBuild.displayName' = version
+        currentBuild.displayName = version
     }
 
     stages {
         stage('Configure') {
             steps {
-                'env.PATH' = "newPath/bin:${env.PATH}"
+                env.PATH = "newPath/bin:${env.PATH}"
 
                 echo "PATH = ${env.PATH}"
                 echo "Configure End"
