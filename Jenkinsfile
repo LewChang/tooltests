@@ -11,9 +11,9 @@ pipeline {
     stages {
         stage('Configure') {
             steps {
-                env.PATH = "newPath/bin:${env.PATH}"
+                //env.PATH = "newPath/bin:${env.PATH}"
 
-                echo "PATH = ${env.PATH}"
+                //echo "PATH = ${env.PATH}"
                 echo "Configure End"
             }
         }
