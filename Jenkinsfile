@@ -1,3 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                // sh 'make'
+                echo "End Build"
+            }
+        }
+        stage('Test'){
+            steps {
+                // sh 'make check'
+                // junit 'reports/**/*.xml'
+                echo " End Test"
+            }
+        }
+        stage('Deploy') {
+            steps {
+               // sh 'make publish'
+               echo "End Deploy"
+            }
+        }
+    }
+}
+
+/*
 node('master') {
 
     stage('Configure') {
@@ -21,3 +48,4 @@ node('master') {
         echo  "Archive Archive Archive"
     }
 }
+*/
